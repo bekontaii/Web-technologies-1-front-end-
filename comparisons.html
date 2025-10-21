@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car Comparisons - AutoVerdict</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="https://img.icons8.com/ios-filled/50/000000/car.png" type="image/x-icon">
+</head>
+<body>
+    <!-- Bootstrap Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark navbar-custom sticky-top">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="index.html"> AutoVerdict</a>
+            
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="reviews.html">Reviews</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="comparisons.html">Comparisons</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="guides.html">Buying Guides</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About Us</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header -->
+    <header class="bg-success text-white py-4">
+        <div class="container">
+            <h1 class="display-5 fw-bold">Car Comparisons</h1>
+            <p class="lead">Head-to-head comparisons to help you choose the right vehicle</p>
+        </div>
+    </header>
+
+    <main class="container my-5">
+        <!-- Tesla vs Ford Comparison -->
+        <section class="card custom-card mb-5">
+            <div class="card-header bg-transparent border-0">
+                <h2 class="text-center display-6 mb-4">Tesla Model Y vs Ford Mustang Mach-E</h2>
+            </div>
+            
+            <div class="card-body">
+                <div class="row g-4">
+                    <!-- Tesla Model Y -->
+                    <div class="col-lg-6">
+                        <div class="comparison-card p-4 h-100">
+                            <h4 class="text-center mb-3">Tesla Model Y Long Range</h4>
+                            <div class="text-center mb-3">
+                                <img src="https://platform.cstatic-images.com/in/v2/stock_photos/62727f48-4f61-4323-ba71-5a6e386b04e4/cc92eb62-6d1e-4799-82b2-c468052f83bb.png" 
+                                     alt="Tesla Model Y" 
+                                     class="img-fluid rounded">
+                            </div>
+                            <ul class="list-unstyled">
+                                <li class="mb-2"><strong>Price:</strong> $49,990</li>
+                                <li class="mb-2"><strong>Range:</strong> 330 miles</li>
+                                <li class="mb-2"><strong>0-60 mph:</strong> 4.8 seconds</li>
+                                <li class="mb-2"><strong>Cargo:</strong> 76 cu ft</li>
+                                <li class="mb-2"><strong>Charging:</strong> Supercharger Network</li>
+                            </ul>
+                            <div class="text-center mt-3">
+                                <span class="badge bg-success fs-6">Winner: Best Range</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Ford Mustang Mach-E -->
+                    <div class="col-lg-6">
+                        <div class="comparison-card p-4 h-100">
+                            <h4 class="text-center mb-3">Ford Mustang Mach-E Premium</h4>
+                            <div class="text-center mb-3">
+                                <img src="https://www.electrifying.com/files/OWOD3x8ykYaQTjEk/mustangred.jpg" 
+                                     alt="Ford Mustang Mach-E" 
+                                     class="img-fluid rounded">
+                            </div>
+                            <ul class="list-unstyled">
+                                <li class="mb-2"><strong>Price:</strong> $46,895</li>
+                                <li class="mb-2"><strong>Range:</strong> 290 miles</li>
+                                <li class="mb-2"><strong>0-60 mph:</strong> 4.8 seconds</li>
+                                <li class="mb-2"><strong>Cargo:</strong> 59.7 cu ft</li>
+                                <li class="mb-2"><strong>Charging:</strong> BlueOval Network</li>
+                            </ul>
+                            <div class="text-center mt-3">
+                                <span class="badge bg-warning fs-6">Winner: Better Value</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Comparison Table -->
+                <div class="mt-5">
+                    <h4 class="mb-3">Detailed Comparison</h4>
+                    <div class="table-responsive">
+                        <table class="table table-striped table-hover">
+                            <thead class="table-dark">
+                                <tr>
+                                    <th>Feature</th>
+                                    <th>Tesla Model Y</th>
+                                    <th>Ford Mustang Mach-E</th>
+                                    <th>Winner</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><strong>Price</strong></td>
+                                    <td>$49,990</td>
+                                    <td>$46,895</td>
+                                    <td><span class="badge bg-warning">Ford</span></td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Range</strong></td>
+                                    <td>330 miles</td>
+                                    <td>290 miles</td>
+                                    <td><span class="badge bg-primary">Tesla</span></td>
+                                </tr>
+                                <tr>
+                                    <td><strong>0-60 mph</strong></td>
+                                    <td>4.8 seconds</td>
+                                    <td>4.8 seconds</td>
+                                    <td><span class="badge bg-secondary">Tie</span></td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Cargo Space</strong></td>
+                                    <td>76 cu ft</td>
+                                    <td>59.7 cu ft</td>
+                                    <td><span class="badge bg-primary">Tesla</span></td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Charging Network</strong></td>
+                                    <td>Supercharger</td>
+                                    <td>BlueOval Network</td>
+                                    <td><span class="badge bg-primary">Tesla</span></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <!-- Verdict -->
+                <div class="mt-4">
+                    <h4>Final Verdict</h4>
+                    <div class="alert alert-info">
+                        <p class="mb-0 fs-5">"Tesla Model Y wins with superior range and charging network, but Ford Mach-E offers better value and a more traditional driving experience that some may prefer."</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Honda vs Toyota Comparison -->
+        <section class="card custom-card">
+            <div class="card-header bg-transparent border-0">
+                <h2 class="text-center display-6 mb-4">Honda CR-V vs Toyota RAV4</h2>
+            </div>
+            
+            <div class="card-body">
+                <div class="row g-4">
+                    <!-- Honda CR-V -->
+                    <div class="col-lg-6">
+                        <div class="comparison-card p-4 h-100">
+                            <h4 class="text-center mb-3">Honda CR-V Hybrid</h4>
+                            <div class="text-center mb-3">
+                                <img src="https://alcf.s3.us-west-1.amazonaws.com/_custom/2024/honda/cr-v/2024%20honda%20cr-v%20%283%29.png" 
+                                     class="img-fluid rounded">
+                            </div>
+                            <ul class="list-unstyled">
+                                <li class="mb-2"><strong>Price:</strong> $33,800</li>
+                                <li class="mb-2"><strong>MPG:</strong> 40/34 city/hwy</li>
+                                <li class="mb-2"><strong>Power:</strong> 204 hp</li>
+                                <li class="mb-2"><strong>Cargo:</strong> 39.3 cu ft</li>
+                                <li class="mb-2"><strong>Warranty:</strong> 3yr/36k mi</li>
+                            </ul>
+                            <div class="text-center mt-3">
+                                <span class="badge bg-info fs-6">Winner: Better Interior</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Toyota RAV4 -->
+                    <div class="col-lg-6">
+                        <div class="comparison-card winner p-4 h-100">
+                            <h4 class="text-center mb-3">Toyota RAV4 Hybrid</h4>
+                            <div class="text-center mb-3">
+                                <img src="https://crdms.images.consumerreports.org/c_lfill,w_563,q_auto,f_auto/prod/cars/cr/model-years/21915-2026-toyota-rav4-hybrid" 
+                                     alt="Toyota RAV4" 
+                                     class="img-fluid rounded">
+                            </div>
+                            <ul class="list-unstyled">
+                                <li class="mb-2"><strong>Price:</strong> $31,725</li>
+                                <li class="mb-2"><strong>MPG:</strong> 41/38 city/hwy</li>
+                                <li class="mb-2"><strong>Power:</strong> 219 hp</li>
+                                <li class="mb-2"><strong>Cargo:</strong> 37.6 cu ft</li>
+                                <li class="mb-2"><strong>Warranty:</strong> 3yr/36k mi</li>
+                            </ul>
+                            <div class="text-center mt-3">
+                                <span class="badge bg-success fs-6">Overall Winner</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Comparison Table -->
+                <div class="mt-5">
+                    <h4 class="mb-3">Key Differences</h4>
+                    <div class="table-responsive">
+                        <table class="table table-striped table-hover">
+                            <thead class="table-dark">
+                                <tr>
+                                    <th>Aspect</th>
+                                    <th>Honda CR-V Advantages</th>
+                                    <th>Toyota RAV4 Advantages</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><strong>Interior Quality</strong></td>
+                                    <td>More refined materials</td>
+                                    <td>Functional layout</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Fuel Economy</strong></td>
+                                    <td>Good (40/34 MPG)</td>
+                                    <td>Better (41/38 MPG)</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Price</strong></td>
+                                    <td>$33,800</td>
+                                    <td>$31,725</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Cargo Space</strong></td>
+                                    <td>39.3 cu ft</td>
+                                    <td>37.6 cu ft</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Power</strong></td>
+                                    <td>204 hp</td>
+                                    <td>219 hp</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <!-- Verdict -->
+                <div class="mt-4">
+                    <h4>Final Verdict</h4>
+                    <div class="alert alert-success">
+                        <p class="mb-0 fs-5">"Toyota RAV4 Hybrid takes the win due to its superior fuel economy and lower price point. However, the Honda CR-V offers a more premium feel that might justify the extra cost for some buyers."</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+ <main class="container my-5">
+        <!-- existing comparison content preserved from your original file -->
+        <!-- Number Sorting Tool -->
+        <section class="card custom-card">
+            <div class="card-body">
+                <h2 class="h4 mb-3">Number Sorting Tool</h2>
+                <p class="text-muted">Enter numbers separated by space or comma, then choose sort order.</p>
+                <div class="row g-3">
+                    <div class="col-md-9">
+                        <textarea id="numbersInput" class="form-control" rows="3" placeholder="e.g. 12, 5, 7 99 0 -3 44"></textarea>
+                    </div>
+                    <div class="col-md-3 d-grid gap-2">
+                        <button id="ascBtn" class="btn btn-primary">Sort Ascending</button>
+                        <button id="descBtn" class="btn btn-outline-primary">Sort Descending</button>
+                    </div>
+                </div>
+                <div class="mt-3">
+                    <h6>Result:</h6>
+                    <div id="sortResult" class="alert alert-light border">—</div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="bg-dark text-white py-4 mt-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <p>&copy;  AutoVerdict. All rights reserved.</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <p>Contact: <a href="mailto:info@autoverdict.com" class="text-white">info@autoverdict.com</a></p>
+                </div>
+            </div>
+        </div>
+    </footer>
+   
+
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

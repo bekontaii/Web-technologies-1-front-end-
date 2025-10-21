@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AutoVerdict - Car Reviews & Comparisons</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="https://img.icons8.com/ios-filled/50/000000/car.png" type="image/x-icon">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark navbar-custom sticky-top">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="index.html"> AutoVerdict</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="reviews.html">Reviews</a></li>
+                    <li class="nav-item"><a class="nav-link" href="comparisons.html">Comparisons</a></li>
+                    <li class="nav-item"><a class="nav-link" href="guides.html">Buying Guides</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <header class="hero-section">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-8">
+                    <h1 class="display-4 fw-bold mb-1">AutoVerdict</h1>
+                    <p class="lead fs-5 mb-2">Your trusted source for honest car reviews and detailed comparisons</p>
+                    <p class="mb-4"><strong>Current time:</strong> <span id="dtNow">--:--</span></p>
+                    <div class="d-flex gap-3 flex-wrap">
+                        <a href="#featured" class="btn btn-light btn-lg px-4">Explore Reviews</a>
+                        <a href="comparisons.html" class="btn btn-outline-light btn-lg px-4">Compare Cars</a>
+                    </div>
+                </div>
+                <div class="col-lg-4 text-center">
+                    <img src="logo1.png" alt="Car" class="img-fluid rounded shadow-custom">
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="container my-5">
+        <section id="featured" class="mb-5 fade-in">
+            <h2 class="text-center mb-4 display-5">Featured Review</h2>
+            <div class="row justify-content-center">
+                <div class="col-lg-10">
+                    <div class="card custom-card shadow-custom">
+                        <div class="row g-0">
+                            <div class="col-md-6">
+                                <img src="https://images.unsplash.com/photo-1560958089-b8a1929cea89?w=600" class="img-fluid rounded-start h-100" alt="Tesla Model 3" style="object-fit: cover;">
+                            </div>
+                            <div class="col-md-6">
+                                <div class="card-body p-4">
+                                    <div class="d-flex justify-content-between align-items-start mb-3">
+                                        <h3 class="card-title h2">2024 Tesla Model 3</h3>
+                                        <span class="badge bg-success fs-6">New</span>
+                                    </div>
+                                    <p class="text-muted mb-2">Latest Review • October 2023</p>
+                                    <div class="rating-stars mb-3 fs-5">⭐⭐⭐⭐☆ <strong class="ms-2">4.2/5</strong></div>
+                                    <p class="card-text fs-6 mb-4">The latest Model 3 brings significant refinements in comfort and noise isolation, making it an even more compelling electric sedan with improved ride quality and premium features.</p>
+                                    <div class="d-flex gap-2 flex-wrap">
+                                        <a href="reviews.html#tesla-model3" class="btn btn-custom">Read Full Review</a>
+                                        <a href="comparisons.html" class="btn btn-outline-primary">Compare with Others</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="mb-5 fade-in">
+            <h2 class="text-center mb-4 display-5">Latest Car Photos</h2>
+            <div id="carCarousel" class="carousel slide carousel-custom" data-bs-ride="carousel">
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#carCarousel" data-bs-slide-to="0" class="active"></button>
+                    <button type="button" data-bs-target="#carCarousel" data-bs-slide-to="1"></button>
+                    <button type="button" data-bs-target="#carCarousel" data-bs-slide-to="2"></button>
+                </div>
+                <div class="carousel-inner rounded-3">
+                    <div class="carousel-item active">
+                        <img src="https://avatars.mds.yandex.net/get-verba/3587101/2a0000018a747aef42d8a776cc3f953ddc33/cattouchret" class="d-block w-100" alt="Tesla Model 3">
+                        <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-50 rounded p-3">
+                            <h5>Tesla Model 3</h5>
+                            <p>Revolutionary electric sedan with autopilot</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="https://founder.ua/storage/photos/shares/news/RAV4.jpg" class="d-block w-100" alt="Toyota RAV4">
+                        <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-50 rounded p-3">
+                            <h5>Toyota RAV4 Hybrid</h5>
+                            <p>Fuel-efficient hybrid SUV with AWD</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="https://www.electrifying.com/files/OWOD3x8ykYaQTjEk/mustangred.jpg" class="d-block w-100" alt="Ford Mustang Mach-E">
+                        <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-50 rounded p-3">
+                            <h5>Ford Mustang Mach-E</h5>
+                            <p>Electric SUV with sports car heritage</p>
+                        </div>
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carCarousel" data-bs-slide="prev"><span class="carousel-control-prev-icon"></span></button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carCarousel" data-bs-slide="next"><span class="carousel-control-next-icon"></span></button>
+            </div>
+        </section>
+        <section class="card custom-card">
+            <div class="card-body">
+                <h2 class="h3 mb-3">Contact Form (Validation)</h2>
+                <form id="contactForm" novalidate>
+                    <div class="row g-3">
+                        <div class="col-md-6">
+                            <label class="form-label" for="fullName">Full Name *</label>
+                            <input class="form-control" id="fullName" type="text" placeholder="Your name">
+                        </div>
+                        <div class="col-md-6">
+                            <label class="form-label" for="email">Email *</label>
+                            <input class="form-control" id="email" type="email" placeholder="you@example.com">
+                        </div>
+                        <div class="col-md-6">
+                            <label class="form-label" for="password">Password *</label>
+                            <input class="form-control" id="password" type="password" minlength="6" placeholder="min 6 chars">
+                        </div>
+                        <div class="col-md-6">
+                            <label class="form-label" for="confirm">Confirm Password *</label>
+                            <input class="form-control" id="confirm" type="password" placeholder="repeat password">
+                        </div>
+                        <div class="col-12">
+                            <div id="formErrors" class="alert alert-danger d-none"></div>
+                            <div id="formOk" class="alert alert-success"></div>
+                        </div>
+                        <div class="col-12">
+                            <button class="btn btn-primary" type="submit">Submit</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-dark text-white py-5 mt-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6">
+                    <p class="mb-1">&copy; AutoVerdict. All rights reserved.</p>
+                    <p class="mb-0">Team: Uzbekbayev Bekarys • Syrgabayev Aset • Agabekuly Asylbek</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

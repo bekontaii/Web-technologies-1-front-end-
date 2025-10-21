@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car Reviews - AutoVerdict</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="https://img.icons8.com/ios-filled/50/000000/car.png" type="image/x-icon">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark navbar-custom sticky-top">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="index.html"> AutoVerdict</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="reviews.html">Reviews</a></li>
+                    <li class="nav-item"><a class="nav-link" href="comparisons.html">Comparisons</a></li>
+                    <li class="nav-item"><a class="nav-link" href="guides.html">Buying Guides</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <header class="bg-primary text-white py-4">
+        <div class="container">
+            <h1 class="display-5 fw-bold">Car Reviews</h1>
+            <p class="lead">Detailed, unbiased reviews of the latest cars on the market</p>
+        </div>
+    </header>
+
+    <main class="container my-5">
+        <!-- Search and Filter -->
+        <div class="row mb-4">
+            <div class="col-md-8">
+                <div class="input-group">
+                    <input type="text" class="form-control form-control-lg" placeholder="Search reviews...">
+                    <button class="btn btn-custom" type="button">Search</button>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <select class="form-select form-select-lg">
+                    <option>All Categories</option>
+                    <option>Electric Vehicles</option>
+                    <option>Hybrid Cars</option>
+                    <option>SUVs</option>
+                    <option>Sedans</option>
+                </select>
+            </div>
+        </div>
+
+        <!-- Tesla Review -->
+        <article class="card custom-card mb-5" id="tesla-model3">
+            <div class="card-header bg-transparent border-0 pt-4">
+                <div class="row align-items-center">
+                    <div class="col-md-8">
+                        <h2 class="card-title h1 mb-2">2024 Tesla Model 3 Highland</h2>
+                        <div class="d-flex flex-wrap gap-3 mb-3">
+                            <span class="badge bg-primary fs-6">Electric Sedan</span>
+                            <span class="badge bg-success fs-6">New Model</span>
+                            <span class="badge bg-warning fs-6">Editor's Choice</span>
+                        </div>
+                        <p class="text-muted mb-0"><i class="bi bi-calendar"></i> Review Date: October 20, 2023</p>
+                    </div>
+                    <div class="col-md-4 text-md-end">
+                        <div class="rating-stars fs-3">
+                            ⭐⭐⭐⭐☆ <strong class="ms-2">4.2/5</strong>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="card-body">
+                <div class="row mb-4">
+                    <div class="col-12">
+                        <img src="https://images.unsplash.com/photo-1560958089-b8a1929cea89?w=800" 
+                             alt="Tesla Model 3" 
+                             class="img-fluid rounded w-100">
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-lg-8">
+                        <h4 class="mb-3">Overview</h4>
+                        <p class="fs-6">The 2024 Tesla Model 3, codenamed "Highland," brings significant updates to Tesla's popular electric sedan. With improvements in noise isolation, ride comfort, and interior quality, it addresses many criticisms of the previous model while maintaining the exceptional performance and efficiency that made it famous.</p>
+
+                        <h4 class="mt-4 mb-3">Key Features</h4>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <ul class="list-unstyled">
+                                    <li class="mb-2">✅ Improved noise isolation</li>
+                                    <li class="mb-2">✅ Enhanced ride comfort</li>
+                                    <li class="mb-2">✅ Premium interior materials</li>
+                                </ul>
+                            </div>
+                            <div class="col-md-6">
+                                <ul class="list-unstyled">
+                                    <li class="mb-2">✅ 272-341 mile range</li>
+                                    <li class="mb-2">✅ 5.8-3.1s 0-60 mph</li>
+                                    <li class="mb-2">✅ Supercharger network</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <h4 class="mt-4 mb-3">Performance</h4>
+                        <p>With instant torque and responsive acceleration, the Model 3 continues to impress. The rear-wheel-drive version achieves 0-60 mph in 5.8 seconds, while the Long Range model cuts that to 4.2 seconds. The Performance variant remains breathtakingly quick at 3.1 seconds.</p>
+                    </div>
+                    
+                    <div class="col-lg-4">
+                        <div class="card bg-light">
+                            <div class="card-body">
+                                <h5 class="card-title">Specifications</h5>
+                                <table class="table table-sm">
+                                    <tr><td><strong>Price:</strong></td><td>From $40,240</td></tr>
+                                    <tr><td><strong>Range:</strong></td><td>272-341 miles</td></tr>
+                                    <tr><td><strong>0-60 mph:</strong></td><td>5.8-3.1 seconds</td></tr>
+                                    <tr><td><strong>Charging:</strong></td><td>Supercharger Network</td></tr>
+                                    <tr><td><strong>Cargo:</strong></td><td>19.8 cu ft</td></tr>
+                                    <tr><td><strong>Warranty:</strong></td><td>4 years/50,000 mi</td></tr>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row mt-4">
+                    <div class="col-12">
+                        <h4>Verdict</h4>
+                        <div class="alert alert-success">
+                            <blockquote class="blockquote mb-0">
+                                <p class="fs-5">"The updates make the Model 3 a more complete package. It's now a proper premium electric sedan that competes effectively with established German rivals while offering superior technology and charging infrastructure."</p>
+                                <footer class="blockquote-footer mt-2">AutoVerdict Review Team</footer>
+                            </blockquote>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </article>
+
+        <!-- Toyota Review -->
+        <article class="card custom-card mb-5" id="toyota-rav4">
+            <div class="card-header bg-transparent border-0 pt-4">
+                <div class="row align-items-center">
+                    <div class="col-md-8">
+                        <h2 class="card-title h1 mb-2">2024 Toyota RAV4 Hybrid</h2>
+                        <div class="d-flex flex-wrap gap-3 mb-3">
+                            <span class="badge bg-success fs-6">Hybrid SUV</span>
+                            <span class="badge bg-info fs-6">Best Seller</span>
+                            <span class="badge bg-warning fs-6">Great Value</span>
+                        </div>
+                        <p class="text-muted mb-0"><i class="bi bi-calendar"></i> Review Date: October 15, 2023</p>
+                    </div>
+                    <div class="col-md-4 text-md-end">
+                        <div class="rating-stars fs-3">
+                            ⭐⭐⭐⭐ <strong class="ms-2">4.0/5</strong>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="card-body">
+                <!-- Similar structure as Tesla review -->
+                <div class="row">
+                    <div class="col-lg-8">
+                        <h4>Overview</h4>
+                        <p>The Toyota RAV4 Hybrid continues to dominate the compact SUV market with its proven reliability, excellent fuel economy, and practical packaging. It remains the benchmark for family-friendly transportation that doesn't compromise on efficiency.</p>
+                        
+                        <!-- Add more content similarly -->
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="card bg-light">
+                            <div class="card-body">
+                                <h5>Specifications</h5>
+                                <table class="table table-sm">
+                                    <tr><td><strong>Price:</strong></td><td>From $31,725</td></tr>
+                                    <tr><td><strong>MPG:</strong></td><td>41 city/38 hwy</td></tr>
+                                    <tr><td><strong>Power:</strong></td><td>219 horsepower</td></tr>
+                                    <tr><td><strong>Cargo:</strong></td><td>37.6 cu ft</td></tr>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </article>
+    </main>
+     <main class="container my-5">
+        <!-- existing reviews content preserved -->
+
+        <!-- Optional: Guessing Game -->
+        <section class="card custom-card">
+            <div class="card-body">
+                <h2 class="h4 mb-3">🎲 Random Number Guessing Game (1–100)</h2>
+                <div class="row g-3 align-items-end">
+                    <div class="col-md-3 d-grid">
+                        <button id="startGameBtn" class="btn btn-success">Start Game</button>
+                    </div>
+                    <div class="col-md-6">
+                        <label class="form-label" for="guessInput">Your guess</label>
+                        <input id="guessInput" type="number" class="form-control" placeholder="1..100" disabled>
+                    </div>
+                    <div class="col-md-3 d-grid">
+                        <button id="guessBtn" class="btn btn-primary" disabled>Guess</button>
+                    </div>
+                </div>
+                <div class="mt-3">
+                    <div id="gameMsg" class="alert alert-light border">Press “Start Game”.</div>
+                    <p id="attempts" class="text-muted mb-0">Attempts: 0</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-dark text-white py-4">
+        <div class="container text-center">
+            <p>&copy;  AutoVerdict. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+     <script src="script.js"></script>
+</body>
+</html>
