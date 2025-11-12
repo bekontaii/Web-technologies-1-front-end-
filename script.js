@@ -205,90 +205,60 @@ function initTeslaGallery() {
 // 2) Если нет — следуем за системой (prefers-color-scheme).
 // 3) Кнопка циклично меняет режим: System → Dark → Light → System...
 function initTheme() {
-  // 1) Подготовим (на всех страницах добавляем кнопку, если её нет)
-  ensureThemeToggleButton();
-
   const btn = document.getElementById("themeToggle");
   if (!btn) return;
 
-  // применить тему
   const applyTheme = (mode) => {
-    // mode: 'system'|'dark'|'light'
     const body = document.body;
 
-    // убрать все классы
+    // Удаляем все классы темы
     body.classList.remove("theme-dark");
 
+    // Добавляем тёмную тему, если выбран Dark
     if (mode === "dark") {
       body.classList.add("theme-dark");
     } else if (mode === "system") {
-      // Если system — смотрим на медиа-запрос
+      // Если система настроена на тёмную тему, применяем её
       const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
-      if (prefersDark) body.classList.add("theme-dark");
+      if (prefersDark) {
+        body.classList.add("theme-dark");
+      }
     }
-    // подпись на кнопке
+
+    // Обновляем текст на кнопке
     btn.textContent = mode === "system" ? "🌗 System"
                    : mode === "dark"   ? "🌞 Light"
                                        : "🌙 Dark";
     btn.setAttribute("data-mode", mode);
   };
 
-  // получить текущий режим
+  // Получаем текущую тему из LocalStorage или используем системную
   const getCurrentMode = () => {
     const stored = localStorage.getItem("theme"); // может быть 'dark'|'light' или null
     return stored ? stored : "system";
   };
 
-  // начальная инициализация
   let mode = getCurrentMode();
   applyTheme(mode);
 
-  // 2) Реагировать на изменение системной темы, если выбран режим 'system'
-  const media = window.matchMedia("(prefers-color-scheme: dark)");
-  const onSystemChange = () => {
-    if (getCurrentMode() === "system") applyTheme("system");
-  };
-  try {
-    // новые браузеры
-    media.addEventListener("change", onSystemChange);
-  } catch {
-    // старые браузеры
-    media.addListener(onSystemChange);
-  }
-
-  // 3) Переключатель по клику: System → Dark → Light → System...
+  // Переключение между режимами по клику
   btn.addEventListener("click", () => {
     const order = ["system", "dark", "light"];
     const current = getCurrentMode();
     const next = order[(order.indexOf(current) + 1) % order.length];
     if (next === "system") {
-      localStorage.removeItem("theme"); // system — не храним, чтобы слушать OS
+      localStorage.removeItem("theme"); // Убираем значение для системного режима
     } else {
-      localStorage.setItem("theme", next);
+      localStorage.setItem("theme", next); // Сохраняем выбранный режим
     }
     applyTheme(next);
   });
 
-  // 4) Синхронизация между вкладками
+  // Синхронизация между вкладками
   window.addEventListener("storage", (e) => {
     if (e.key === "theme") {
       const newMode = getCurrentMode();
       applyTheme(newMode);
     }
   });
-
-  // вспомогательная: если кнопки нет в html — аккуратно вставим в navbar
-  function ensureThemeToggleButton() {
-    if (document.getElementById("themeToggle")) return;
-    const nav = document.querySelector(".navbar .container, .navbar .container-fluid, .navbar");
-    if (!nav) return;
-    const btn = document.createElement("button");
-    btn.id = "themeToggle";
-    btn.className = "btn btn-outline-light ms-2";
-    btn.type = "button";
-    btn.textContent = "🌗 System";
-    // положим справа от меню
-    nav.appendChild(btn);
-  }
 }
-
