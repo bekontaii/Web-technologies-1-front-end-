@@ -512,3 +512,38 @@ button#remove-last-btn:hover {
     gap: 10px;
   }
 }
+/* ==================== DARK THEME ==================== */
+.theme-dark {
+  background-color: #121212;
+  color: #f1f1f1;
+  transition: background-color 0.5s, color 0.5s;
+}
+
+/* Применяем цвета для navbar и других элементов */
+.theme-dark .navbar-custom {
+  background-color: #1f1f1f !important;
+}
+
+.theme-dark .custom-card {
+  background-color: #1e1e1e;
+  color: #e0e0e0;
+}
+
+.theme-dark .btn-outline-light {
+  color: #e0e0e0;
+  border-color: #e0e0e0;
+}
+
+.theme-dark .btn-outline-light:hover {
+  background-color: #e0e0e0;
+  color: #111;
+}
+
+.theme-dark .list-group-item {
+  background-color: #1a1a1a;
+  color: #f0f0f0;
+}
+
+.theme-dark a {
+  color: #81d4fa !important;
+}
