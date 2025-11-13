@@ -1,0 +1,628 @@
+
+:root {
+    --primary-color: #3498db;
+    --secondary-color: #2c3e50;
+    --accent-color: #e74c3c;
+    --success-color: #27ae60;
+    --warning-color: #f39c12;
+}
+
+
+.custom-card {
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+    margin-bottom: 2rem;
+}
+
+.custom-card:hover {
+    transform: translateY(-5px);
+}
+
+/* Profile cards */
+.profile-card {
+    border: 3px solid #bdc3c7;
+    border-radius: 15px;
+    transition: all 0.3s ease;
+    height: 100%;
+}
+
+.profile-card:hover {
+    border-color: var(--primary-color);
+    transform: translateY(-8px);
+}
+
+/* Custom buttons */
+.btn-custom {
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    color: white;
+    border: none;
+    border-radius: 25px;
+    padding: 10px 25px;
+    transition: all 0.3s ease;
+}
+
+.btn-custom:hover {
+    background: linear-gradient(135deg, var(--secondary-color), var(--primary-color));
+    color: white;
+    transform: scale(1.05);
+}
+
+/* Rating stars */
+.rating-stars {
+    color: #f39c12;
+    font-size: 1.2rem;
+}
+
+/* Custom navbar */
+.navbar-custom {
+    background-color: var(--secondary-color) !important;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.navbar-custom .navbar-brand {
+    color: white !important;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.navbar-custom .nav-link {
+    color: white !important;
+    transition: color 0.3s ease;
+}
+
+.navbar-custom .nav-link:hover,
+.navbar-custom .nav-link.active {
+    color: var(--primary-color) !important;
+}
+
+
+.hero-section {
+    background: linear-gradient(135deg, var(--secondary-color), var(--primary-color));
+    color: white;
+    padding: 4rem 0;
+}
+
+.comparison-card {
+    border-left: 4px solid var(--primary-color);
+    transition: all 0.3s ease;
+}
+
+.comparison-card.winner {
+    border-left: 4px solid var(--success-color);
+    background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+}
+
+
+.profile-photo {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid;
+    margin: 0 auto 1rem;
+}
+
+.badge-custom {
+    background: var(--primary-color);
+    color: white;
+}
+
+/
+.table-hover tbody tr:hover {
+    background-color: rgba(52, 152, 219, 0.1);
+}
+
+
+.carousel-custom .carousel-item img {
+    border-radius: 10px;
+    height: 400px;
+    object-fit: cover;
+}
+
+
+@media (max-width: 768px) {
+    .hero-section {
+        padding: 2rem 0;
+        text-align: center;
+    }
+    
+    .profile-card {
+        margin-bottom: 1.5rem;
+    }
+}
+
+
+.fade-in {
+    animation: fadeIn 0.8s ease-in;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+
+.shadow-custom {
+    box-shadow: 0 8px 25px rgba(0,0,0,0.15) !important;
+}
+
+
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeIn 0.8s ease forwards;
+}
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+.custom-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.custom-card:hover {
+  transform: scale(1.03);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+
+.list-group-item {
+  animation: itemIn 0.4s ease;
+}
+@keyframes itemIn {
+  from {opacity: 0; transform: translateX(-20px);}
+  to {opacity: 1; transform: translateX(0);}
+}
+/* === THEME (light/dark + system) ======================= */
+:root {
+  --bg: #ffffff;
+  --fg: #111111;
+  --card: #ffffff;
+  --muted: #6c757d;
+  --link: #0d6efd;
+  --border: rgba(0,0,0,0.1);
+}
+
+/* активируется, когда на <body> есть класс .theme-dark */
+.theme-dark {
+  --bg: #121212;
+  --fg: #f1f1f1;
+  --card: #1a1a1a;
+  --muted: #b3b3b3;
+  --link: #81d4fa;
+  --border: rgba(255,255,255,0.08);
+}
+
+/* применяем переменные ко всему сайту */
+html, body {
+  background-color: var(--bg);
+  color: var(--fg);
+  transition: background-color .35s ease, color .35s ease;
+}
+
+/* часто используемые элементы */
+.custom-card,
+.card {
+  background-color: var(--card);
+  color: var(--fg);
+  border-color: var(--border);
+}
+
+.navbar-custom { background-color: var(--secondary-color) !important; }
+.theme-dark .navbar-custom { background-color: #1f1f1f !important; }
+
+.table, .list-group-item, .form-control, .form-select {
+  background-color: var(--card);
+  color: var(--fg);
+  border-color: var(--border);
+}
+
+a { color: var(--link) !important; }
+.text-muted, .text-secondary { color: var(--muted) !important; }
+
+/* кнопка переключателя — аккуратнее в тёмной теме */
+.theme-dark .btn-outline-light { border-color: #e0e0e0; color: #e0e0e0; }
+.theme-dark .btn-outline-light:hover { background:#e0e0e0; color:#111; }
+/* Основные стили для To-Do листа */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f7fc;
+  color: #333;
+}
+
+/* Стили контейнера для списка */
+.todo-container {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Стили для заголовка To-Do списка */
+h2 {
+  font-size: 1.75rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #343a40;
+}
+
+/* Стили для строки ввода задачи */
+.todo-input-group {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+/* Поле ввода задачи */
+#task-input {
+  flex: 1;
+  padding: 10px;
+  font-size: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  transition: border 0.3s;
+}
+
+/* Изменение стиля поля при фокусе */
+#task-input:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+/* Кнопка добавления задачи */
+#add-task-btn {
+  padding: 10px 15px;
+  background-color: #28a745;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s;
+}
+
+#add-task-btn:hover {
+  background-color: #218838;
+}
+
+/* Стили для сообщения (например, ошибка) */
+#message {
+  margin-top: 10px;
+  padding: 10px;
+  font-size: 1rem;
+  color: #fff;
+  border-radius: 5px;
+}
+
+#message.success {
+  background-color: #28a745;
+}
+
+#message.error {
+  background-color: #dc3545;
+}
+
+/* Прогресс-бар */
+.progress-section {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.progress {
+  background-color: #e9ecef;
+  border-radius: 20px;
+  height: 20px;
+  width: 100%;
+}
+
+.progress-bar {
+  background-color: #007bff;
+  height: 100%;
+  border-radius: 20px;
+}
+
+#progress-text {
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+/* Стили для списка задач */
+#task-list {
+  margin-top: 20px;
+}
+
+#task-list li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #f8f9fa;
+  padding: 12px;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  transition: background-color 0.3s;
+}
+
+#task-list li:hover {
+  background-color: #f1f3f5;
+}
+
+#task-list li.completed {
+  text-decoration: line-through;
+  color: #6c757d;
+}
+
+#task-list li button {
+  background-color: #dc3545;
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+#task-list li button:hover {
+  background-color: #c82333;
+}
+
+/* Стили для кнопок действия (удалить все выполненные задачи) */
+.todo-actions {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+
+button#clear-completed-btn,
+button#remove-last-btn {
+  padding: 10px 20px;
+  background-color: #ff9800;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s;
+}
+
+button#clear-completed-btn:hover,
+button#remove-last-btn:hover {
+  background-color: #e68900;
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+  .todo-input-group {
+    flex-direction: column;
+  }
+
+  #task-input {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  #add-task-btn {
+    width: 100%;
+  }
+
+  .todo-actions {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+/* ==================== DARK THEME ==================== */
+.theme-dark {
+  background-color: #121212;
+  color: #f1f1f1;
+  transition: background-color 0.5s, color 0.5s;
+}
+
+/* Применяем цвета для navbar и других элементов */
+.theme-dark .navbar-custom {
+  background-color: #1f1f1f !important;
+}
+
+.theme-dark .custom-card {
+  background-color: #1e1e1e;
+  color: #e0e0e0;
+}
+
+.theme-dark .btn-outline-light {
+  color: #e0e0e0;
+  border-color: #e0e0e0;
+}
+
+.theme-dark .btn-outline-light:hover {
+  background-color: #e0e0e0;
+  color: #111;
+}
+
+.theme-dark .list-group-item {
+  background-color: #1a1a1a;
+  color: #f0f0f0;
+}
+
+.theme-dark a {
+  color: #81d4fa !important;
+}
+.tesla-gallery {
+  position: relative;
+  max-width: 1400px;
+  margin: 2rem auto;
+  border-radius: 20px;
+  overflow: hidden;
+  background: linear-gradient(145deg, #fdfdfd, #f3f3f3);
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.15);
+  padding: 1rem 0 1.5rem;
+}
+
+.main-photo {
+  width: 100%;
+  max-height: 600px;
+  object-fit: cover;
+  border-radius: 15px;
+  transition: opacity 0.5s ease, transform 0.4s ease;
+}
+
+.main-photo:hover {
+  transform: scale(1.01);
+}
+
+/* Стрелки на галерее */
+.arrow {
+  position: absolute;
+  top: 43%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  color: rgba(255, 255, 255, 0.85);
+  font-size: 3rem;
+  cursor: pointer;
+  padding: 0;
+  transition: all 0.3s ease;
+  z-index: 10;
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.arrow:hover {
+  color: #ffffff;
+  transform: translateY(-50%) scale(1.15);
+  text-shadow: 0 0 20px rgba(255, 255, 255, 0.8);
+}
+
+.arrow.left { left: 30px; }
+.arrow.right { right: 30px; }
+
+/* Миниатюры */
+.thumbnails {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  padding-top: 1.2rem;
+}
+
+.thumb {
+  width: 110px;
+  height: 70px;
+  object-fit: cover;
+  border-radius: 10px;
+  opacity: 0.7;
+  cursor: pointer;
+  border: 2px solid transparent;
+  transition: all 0.3s ease;
+}
+
+.thumb:hover {
+  opacity: 1;
+  transform: scale(1.08);
+}
+
+.thumb.active {
+  opacity: 1;
+  border: 2px solid #e82127;
+  box-shadow: 0 4px 15px rgba(232, 33, 39, 0.4);
+}
+
+@media (max-width: 768px) {
+  .main-photo { max-height: 400px; }
+  .thumb { width: 80px; height: 55px; }
+  .arrow { font-size: 2rem; }
+}
+/* Tesla Gallery Styles */
+.tesla-gallery-container {
+    margin: 2rem 0;
+}
+
+.tesla-gallery {
+    background: white;
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.main-image-container {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.main-image {
+    width: 100%;
+    height: 600px;
+    object-fit: cover;
+    border-radius: 10px;
+    display: block;
+}
+
+.nav-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0,0,0,0.5);
+    color: white;
+    border: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.nav-btn:hover {
+    background: rgba(0,0,0,0.8);
+}
+
+.prev-btn {
+    left: 15px;
+}
+
+.next-btn {
+    right: 15px;
+}
+
+.thumbnails {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.thumb {
+    width: 80px;
+    height: 60px;
+    object-fit: cover;
+    border-radius: 5px;
+    cursor: pointer;
+    opacity: 0.6;
+    transition: all 0.3s;
+    border: 2px solid transparent;
+}
+
+.thumb:hover {
+    opacity: 0.8;
+}
+
+.thumb.active {
+    opacity: 1;
+    border-color: #3498db;
+}
+
+/* Dark theme */
+.theme-dark .tesla-gallery {
+    background: #1a1a1a;
+}
+
+@media (max-width: 768px) {
+    .main-image {
+        height: 250px;
+    }
+    
+    .thumb {
+        width: 60px;
+        height: 45px;
+    }
+}
